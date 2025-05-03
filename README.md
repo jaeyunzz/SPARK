@@ -2,7 +2,7 @@
 
 ###
 
-<p align="right">Criado por Bleddilyn Ferreira, Felipe Caetano, Fernando Nociti, João Paulo Oliveira e João Vitor Zeferino, SPARK é um website que utiliza de um microcontrolador, um sensor de potência, um sensor de corrente e um transformador de corrente para medir o consumo de um determinado equipamento. Ele mede o valor da energia em watts, o valor da corrente em ampéres, a tensão estimada e o consumo baseado nos sensores para ajudar o usuário a se organizar e encontrar estratégias para diminuir os custos com possíveis contas altas de energia e estimular a eficiência energética em sua casa.</p>
+<p align="left">Criado por Bleddilyn Ferreira, Felipe Caetano, Fernando Nociti, João Paulo Oliveira e João Vitor Zeferino, SPARK é um website que utiliza de um microcontrolador, um sensor de potência, um sensor de corrente e um transformador de corrente para medir o consumo de um determinado equipamento. Ele mede o valor da energia em watts, o valor da corrente em ampéres, a tensão estimada e o consumo baseado nos sensores para ajudar o usuário a se organizar e encontrar estratégias para diminuir os custos com possíveis contas altas de energia e estimular a eficiência energética em sua casa.</p>
 
 ###
 
