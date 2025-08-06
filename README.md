@@ -29,7 +29,6 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="mysql logo"  />
   <img width="12" />
   <img src="https://cdn.simpleicons.org/c/A8B9CC" height="40" alt="c logo"  />
-  <iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVIMiTRFY=/?embedMode=view_only_without_ui&moveToViewport=-2177,-317,4230,1933&embedId=571802827704" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 </div>
 
 ###
