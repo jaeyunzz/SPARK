@@ -41,7 +41,3 @@
 </p>
 
 ###
-
-<iframe width="768" height="432" src="https://drive.google.com/drive/folders/17ahC-VmTj9HqqoP_pgX6UZ7LN2EBvJoL?usp=sharing" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
-
-###
