@@ -31,7 +31,14 @@
   <img src="https://cdn.simpleicons.org/c/A8B9CC" height="40" alt="c logo"  />
 </div>
 
+###
+
 <h2 align="left">Google Drive</h2>
+<p align="left">
+  <a href="https://drive.google.com/drive/folders/17ahC-VmTj9HqqoP_pgX6UZ7LN2EBvJoL?usp=sharing" target="_blank">
+    📂 Acesse a pasta no Google Drive
+  </a>
+</p>
 
 ###
 
