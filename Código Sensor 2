@@ -5,11 +5,11 @@
 EnergyMonitor emon1;
 
 // Configurações da rede Wi-Fi
-const char* ssid = "A54 samuel";
-const char* password = "12345678";
+const char* ssid = "Wesley";
+const char* password = "123456789";
 
 // Endereço IP do broker MQTT
-const char* mqtt_server = "10.215.78.30";
+const char* mqtt_server = "192.168.81.167";
 
 // Cliente Wi-Fi e cliente MQTT
 WiFiClient leitorCorrente;
@@ -68,7 +68,7 @@ void reconnect() {
 
 void setup() {
   Serial.begin(115200);
-  emon1.current(32,2.87); // Ajuste o fator de calibração conforme necessário
+  emon1.current(32,44.94); // Ajuste o fator de calibração conforme necessário
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
@@ -84,9 +84,7 @@ void loop() {
     double Irms = emon1.calcIrms(1480);
 
     // Filtrar ruídos abaixo de 0.25 A (ajuste conforme necessário)
-    if (Irms < 0.25) {
-      Irms = 0.0;
-    }
+    //corrente com a lâmpada com 4 voltas no fio: 1.1
 
     // Mostrar no monitor serial
     Serial.print("Corrente (Irms): ");
