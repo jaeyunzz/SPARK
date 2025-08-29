@@ -1,0 +1,57 @@
+import time
+import machine
+import urequests
+from esp import espnow
+
+
+# Configuração do pino ADC
+adc_pin = 32  # Pino de ADC do ESP32 para ler o sensor de corrente
+calibration_factor = 2.79  # Fator de calibração para o seu sensor de corrente
+
+# Intervalo para envio de dados
+interval = 1  # 1 segundo
+last_send = 0
+
+# Função para calcular a corrente RMS (baseado em amostras do ADC)
+def read_current():
+    # Aqui estamos lendo o ADC para calcular a corrente
+    adc = machine.ADC(machine.Pin(adc_pin))
+    adc.atten(machine.ADC.ATTN_0DB)  # Definir o alcance de entrada do ADC
+    adc.width(machine.ADC.WIDTH_12BIT)  # Definir resolução de 12 bits
+
+    sample = adc.read()
+    voltage = (sample / 4095.0) * 3.3  # Converte a leitura para voltagem
+
+    # Calcular corrente com base no fator de calibração
+    current = voltage / calibration_factor
+    return current
+
+# Função para enviar dados para o servidor (substitua pela URL do seu servidor ou nuvem)
+def send_to_cloud(current_value):
+    url = "https://seu_servidor.com/api/envio"  # URL do seu endpoint na nuvem
+    payload = {"corrente": current_value}
+    
+    try:
+        response = urequests.post(url, json=payload)
+        print("Dados enviados:", response.status_code)
+        response.close()
+    except Exception as e:
+        print("Erro ao enviar dados:", e)
+
+# Loop principal
+while True:
+    current_time = time.ticks_ms()
+    
+    # Envia dados a cada 'interval' segundos
+    if time.ticks_diff(current_time, last_send) >= (interval * 1000):
+        Irms = read_current()
+        send_to_cloud(Irms)
+        
+        # Log local
+        print("Corrente (Irms): {:.3f} A".format(Irms))
+        
+        # Atualiza o tempo do último envio
+        last_send = current_time
+    
+    time.sleep(0.1)  # Pequeno atraso para evitar sobrecarga no loop
+
