@@ -1,0 +1,139 @@
+#include <WiFi.h>
+#include <WebServer.h>
+#include <EmonLib.h> // Biblioteca para SCT-013
+
+// ========================
+// CONFIGURAÇÕES DE REDE
+// ========================
+const char* ssid = "ROF5";          // <-- Troque pelo nome do seu WiFi
+const char* password = "raptorf22"; // <-- Troque pela senha
+
+// ========================
+// SENSOR DE CORRENTE
+// ========================
+EnergyMonitor emon1;         // Instância da EmonLib
+const int sensorPin = 32;    // Pino ADC do SCT-013
+const double calibrationFactor = 2.79;
+
+// ========================
+// ENERGIA E CUSTO
+// ========================
+const float tensao = 110.0;       // Tensão fixa em Volts
+const float preco_kWh = 0.80;     // Preço por kWh (R$)
+double corrente = 0.0;
+double potencia = 0.0;
+double energia_kWh = 0.0;
+double custo_estimado = 0.0;
+
+// ========================
+// SERVIDOR WEB
+// ========================
+WebServer server(80);
+
+unsigned long lastSend = 0;
+const long intervalo = 1000; // 1 segundo
+
+// ========================
+// PÁGINA HTML
+// ========================
+const char MAIN_page[] PROGMEM = R"rawliteral(
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Monitor de Corrente</title>
+</head>
+<body>
+  <h1>Monitor de Corrente</h1>
+  <p><strong>Corrente:</strong> <span id="corrente">0</span> A</p>
+  <p><strong>Potência:</strong> <span id="potencia">0</span> W</p>
+  <p><strong>Energia:</strong> <span id="energia">0</span> kWh</p>
+  <p><strong>Custo:</strong> R$ <span id="custo">0</span></p>
+
+  <script>
+    async function atualizar() {
+      let r = await fetch("/dados");
+      let data = await r.json();
+      document.getElementById("corrente").textContent = data.corrente.toFixed(3);
+      document.getElementById("potencia").textContent = data.potencia.toFixed(1);
+      document.getElementById("energia").textContent = data.energia.toFixed(6);
+      document.getElementById("custo").textContent = data.custo.toFixed(4);
+    }
+    setInterval(atualizar, 1000);
+  </script>
+</body>
+</html>
+)rawliteral";
+
+// ========================
+// HANDLERS DO SERVIDOR
+// ========================
+void handleRoot() {
+  server.send(200, "text/html", MAIN_page);
+}
+
+void handleDados() {
+  String json = "{";
+  json += "\"corrente\": " + String(corrente, 3) + ",";
+  json += "\"potencia\": " + String(potencia, 1) + ",";
+  json += "\"energia\": " + String(energia_kWh, 6) + ",";
+  json += "\"custo\": " + String(custo_estimado, 4);
+  json += "}";
+  server.send(200, "application/json", json);
+}
+
+// ========================
+// SETUP
+// ========================
+void setup() {
+  Serial.begin(115200);
+  delay(1500);
+
+  // Configuração do sensor
+  emon1.current(sensorPin, calibrationFactor);
+
+  // Conectar ao WiFi
+  Serial.println("Conectando ao WiFi...");
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("\nWiFi conectado!");
+  Serial.print("IP do ESP32: ");
+  Serial.println(WiFi.localIP());
+
+  // Configurar rotas do servidor
+  server.on("/", handleRoot);
+  server.on("/dados", handleDados);
+
+  server.begin();
+  Serial.println("Servidor web iniciado");
+}
+
+// ========================
+// LOOP
+// ========================
+void loop() {
+  server.handleClient();
+
+  if (millis() - lastSend > intervalo) {
+    corrente = emon1.calcIrms(1480);           // Mede corrente
+    potencia = corrente * tensao;              // Potência em W
+    unsigned long tempoDecorrido = intervalo;  // 1000 ms fixos
+    energia_kWh += (potencia * tempoDecorrido) / 3600000.0; // kWh
+    custo_estimado = energia_kWh * preco_kWh;
+
+    // Debug no monitor serial
+    Serial.print("Corrente: ");
+    Serial.print(corrente, 3);
+    Serial.print(" A | Potência: ");
+    Serial.print(potencia, 1);
+    Serial.print(" W | Energia: ");
+    Serial.print(energia_kWh, 6);
+    Serial.print(" kWh | Custo: R$ ");
+    Serial.println(custo_estimado, 4);
+
+    lastSend = millis();
+  }
+}
