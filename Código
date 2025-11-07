@@ -1,0 +1,164 @@
+#include <WiFi.h>
+#include <WebServer.h>
+#include <EmonLib.h>
+
+const char* ssid = "Wesley";          
+const char* password = "123456789";     
+
+EnergyMonitor emon1;
+const int sensorPin = 32;
+const double calibrationFactor = 2.79;
+
+const int tensaoPin = 33;
+const float fatorDivisao = 6.04;
+double tensaoMedida = 0.0;
+
+const float preco_kWh = 0.80;
+double corrente = 0.0;
+double potencia = 0.0;
+double energia_kWh = 0.0;
+double custo_estimado = 0.0;
+double custo_2min = 0.0;
+
+double tensaoManual = 0.0;
+double potenciaManual = 0.0;
+
+WebServer server(80);
+
+unsigned long lastSend = 0;
+const long intervalo = 1000;
+unsigned long last2minCheck = 0;
+
+double lerTensao() {
+  int leitura = analogRead(tensaoPin);
+  double v_adc = (leitura / 4095.0) * 3.3;
+  double v_real = v_adc * fatorDivisao;
+  return v_real;
+}
+
+// Página HTML simples para depuração via navegador
+const char MAIN_page[] PROGMEM = R"rawliteral(
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Monitor de Energia</title>
+</head>
+<body>
+  <h1>Monitor de Energia</h1>
+  <p>Tensão: <span id="tensao">0</span> V</p>
+  <p>Corrente: <span id="corrente">0</span> A</p>
+  <p>Potência: <span id="potencia">0</span> W</p>
+  <p>Energia: <span id="energia">0</span> kWh</p>
+  <p>Custo Atual: R$ <span id="custo">0</span></p>
+  <p>Custo 2 min: R$ <span id="custo2">0</span></p>
+
+  <h3>Configuração manual</h3>
+  <form id="configForm">
+    <label>Tensão (V):</label>
+    <input type="number" id="inputTensao" step="0.1"><br><br>
+    <label>Potência (W):</label>
+    <input type="number" id="inputPotencia" step="0.1"><br><br>
+    <button type="button" onclick="enviarConfig()">Enviar</button>
+  </form>
+
+  <script>
+    async function atualizar() {
+      let r = await fetch("/dados");
+      let data = await r.json();
+      document.getElementById("tensao").textContent = data.tensao.toFixed(2);
+      document.getElementById("corrente").textContent = data.corrente.toFixed(3);
+      document.getElementById("potencia").textContent = data.potencia.toFixed(1);
+      document.getElementById("energia").textContent = data.energia.toFixed(6);
+      document.getElementById("custo").textContent = data.custo.toFixed(4);
+      document.getElementById("custo2").textContent = data.custo2.toFixed(4);
+    }
+
+    async function enviarConfig() {
+      let t = document.getElementById("inputTensao").value;
+      let p = document.getElementById("inputPotencia").value;
+      await fetch(`/setConfig?tensao=${t}&potencia=${p}`);
+      alert("Valores enviados!");
+    }
+
+    setInterval(atualizar, 1000);
+  </script>
+</body>
+</html>
+)rawliteral";
+
+void handleRoot() {
+  server.send(200, "text/html", MAIN_page);
+}
+
+void handleDados() {
+  String json = "{";
+  json += "\"tensao\": " + String(tensaoMedida, 2) + ",";
+  json += "\"corrente\": " + String(corrente, 3) + ",";
+  json += "\"potencia\": " + String(potencia, 1) + ",";
+  json += "\"energia\": " + String(energia_kWh, 6) + ",";
+  json += "\"custo\": " + String(custo_estimado, 4) + ",";
+  json += "\"custo2\": " + String(custo_2min, 4);
+  json += "}";
+  server.send(200, "application/json", json);
+}
+
+void handleSetConfig() {
+  if (server.hasArg("tensao")) {
+    tensaoManual = server.arg("tensao").toFloat();
+  }
+  if (server.hasArg("potencia")) {
+    potenciaManual = server.arg("potencia").toFloat();
+  }
+  Serial.printf("Configuração recebida → Tensao: %.2f V | Potencia: %.2f W\n", tensaoManual, potenciaManual);
+  server.send(200, "text/plain", "OK");
+}
+
+void setup() {
+  Serial.begin(115200);
+  delay(1500);
+
+  emon1.current(sensorPin, calibrationFactor);
+
+  WiFi.begin(ssid, password);
+  Serial.println("Conectando ao WiFi...");
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("\nWiFi conectado!");
+  Serial.print("IP do ESP32: ");
+  Serial.println(WiFi.localIP());
+
+  server.on("/", handleRoot);
+  server.on("/dados", handleDados);
+  server.on("/setConfig", handleSetConfig);
+  server.begin();
+
+  last2minCheck = millis();
+}
+
+void loop() {
+  server.handleClient();
+
+  if (millis() - lastSend > intervalo) {
+    corrente = emon1.calcIrms(1480);
+
+    // Usa tensão e potência manuais se definidas
+    tensaoMedida = (tensaoManual > 0) ? tensaoManual : lerTensao();
+    potencia = (potenciaManual > 0) ? potenciaManual : (corrente * tensaoMedida);
+
+    energia_kWh += (potencia * intervalo) / 3600000.0;
+    custo_estimado = energia_kWh * preco_kWh;
+
+    if (millis() - last2minCheck >= 120000) {
+      custo_2min = custo_estimado;
+      last2minCheck = millis();
+    }
+
+    Serial.printf("Tensao: %.2f V | Corrente: %.3f A | Potencia: %.1f W | Energia: %.6f kWh | Custo: R$ %.4f\n",
+                  tensaoMedida, corrente, potencia, energia_kWh, custo_estimado);
+
+    lastSend = millis();
+  }
+}
