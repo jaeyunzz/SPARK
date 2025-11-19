@@ -1,7 +1,10 @@
+Í<img width="500" height="500" alt="SPARK-logo" src="https://github.com/user-attachments/assets/85bfdff4-eaa7-48f8-9f5c-00f4ec38a611" />
+
+
 PARK – Sistema de Monitoramento Energético
 Especificação de Requisitos – Sparkanos
 
-📌 Índice
+📌 Indice
 📘 Sobre o Projeto
 
  A eletricidade, como conhecemos hoje, é resultado de séculos de descobertas e avanços científicos que transformaram profundamente a sociedade. Com o aumento das preocupações ambientais  e o surgimento da Indústria 4.0, tornou-se essencial buscar formas mais eficientes, inteligentes e sustentáveis de utilizar energia.
