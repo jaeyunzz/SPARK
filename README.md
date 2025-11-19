@@ -2,7 +2,7 @@
 
 
 ⚡ ARK – Sistema de Monitoramento Energético
-Especificação de Requisitos – Sparkanos
+  Especificação de Requisitos – Sparkanos
 
 📘 Índice
 
@@ -62,7 +62,9 @@ Este espaço deve ser preenchido com o fluxograma do sistema assim que disponív
 Sugestão: incluir um fluxograma com o fluxo ESP32 → API → App.
 
 📝 6. Levantamento de Requisitos
+
 👤 Perfis de Usuários
+
 Administrador (Web Designer)
 
 Criar layouts de alta fidelidade
@@ -88,6 +90,7 @@ O backlog será inserido quando finalizado.
 Recomenda-se incluir: Épicos, Histórias de Usuário, Critérios de Aceitação e Priorização.
 
 🗂️ 8. Diagramas UML
+
 📌 7.1 — Diagrama de Casos de Uso
 
 Adicionar aqui a imagem do diagrama correspondente.
@@ -115,6 +118,7 @@ Infraestrutura em nuvem
 Ferramentas de testes e simulação
 
 📱 11. Equipamentos Necessários
+
 💻 Computação
 
 Notebooks e computadores
