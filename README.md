@@ -3,28 +3,6 @@ Especificação de Requisitos – Sparkanos
 
 📌 Índice
 
--Sobre o Projeto
-
--Objetivos
-
--Descrição do Sistema
-
--Fluxograma
-
--Levantamento de Requisitos
-
--Product Backlog
-
--Diagramas UML
-
--Prototipação das Interfaces
-
--Recursos Utilizados
-
--Custos
-
--Equipe Envolvida
-
 📘 Sobre o Projeto
 
  A eletricidade, como conhecemos hoje, é resultado de séculos de descobertas e avanços científicos que transformaram profundamente a sociedade. Com o aumento das preocupações ambientais  e o surgimento da Indústria 4.0, tornou-se essencial buscar formas mais eficientes, inteligentes e sustentáveis de utilizar energia.
