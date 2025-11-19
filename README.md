@@ -1,8 +1,6 @@
 <img width="350" height="350" alt="SPARK-logo" src="https://github.com/user-attachments/assets/85bfdff4-eaa7-48f8-9f5c-00f4ec38a611" />
 
-
-⚡ ARK – Sistema de Monitoramento Energético
-  Especificação de Requisitos – Sparkanos
+Especificação de Requisitos – Sparkanos
 
 📘 Índice
 
@@ -35,7 +33,7 @@ Acesso a indicadores essenciais para tomada de decisões
 
 🖥️ 3. Descrição do Sistema
 
-O ARK integra hardware e software para realizar a leitura dos sensores e transmitir as informações ao usuário final por meio de um aplicativo intuitivo, dinâmico e personalizável.
+O SPARK integra hardware e software para realizar a leitura dos sensores e transmitir as informações ao usuário final por meio de um aplicativo intuitivo, dinâmico e personalizável.
 
 🖼️ 4. Tela Principal
 
@@ -152,4 +150,3 @@ Scrum Master:
 João Paulo Oliveira
 
 Designer	Bleddilyn Ferreira
-DBA
