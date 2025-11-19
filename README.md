@@ -15,7 +15,9 @@ Especificação de Requisitos – Sparkanos
  Sensor de tensão ACS712
  O sistema busca aprimorar o gerenciamento energético em ambientes industriais, fornecendo visualização de dados, gráficos e informações essenciais para tomada de decisões.
 
+ 
  🖥️ Descrição do Sistema
+ 
  📌 Tela Principal
 
  O usuário informa o nome do objeto a ser monitorado.
@@ -24,7 +26,7 @@ Especificação de Requisitos – Sparkanos
  Gráfico de variação de corrente
 
  Inclui:
-#Manual de usuário
+ #Manual de usuário
 
 #Configurações de personalização
 
@@ -54,8 +56,6 @@ Insira aqui seu backlog quando o documento estiver concluído.
 
 🎨 Prototipação das Interfaces
 -Adicionar protótipos das telas aqui (Figma, imagens, mockups, etc.)
-🛠️ Recursos Utilizados
--👥 Pessoal
 
 💻 Tecnologia
 IDEs de desenvolvimento
