@@ -11,7 +11,7 @@ A eletricidade, tal como a conhecemos, é fruto de séculos de pesquisa, experim
 
 Com o avanço da Indústria 4.0, aliado às crescentes preocupações ambientais, surge a necessidade de sistemas cada vez mais inteligentes, eficientes e sustentáveis para acompanhar e otimizar o consumo energético.
 
-Nesse cenário, o ARK apresenta-se como uma solução embarcada moderna e precisa, capaz de monitorar, analisar e fornecer informações essenciais sobre o uso de energia em ambientes industriais, contribuindo para redução de custos, prevenção de falhas e maior eficiência operacional.
+Nesse cenário, o SPARK apresenta-se como uma solução embarcada moderna e precisa, capaz de monitorar, analisar e fornecer informações essenciais sobre o uso de energia em ambientes industriais, contribuindo para redução de custos, prevenção de falhas e maior eficiência operacional.
 
 🎯 2. Objetivos
 
