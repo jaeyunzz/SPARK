@@ -1,96 +1,173 @@
 <img width="350" height="350" alt="SPARK-logo" src="https://github.com/user-attachments/assets/85bfdff4-eaa7-48f8-9f5c-00f4ec38a611" />
 
 
-PARK – Sistema de Monitoramento Energético
+⚡ ARK – Sistema de Monitoramento Energético
 Especificação de Requisitos – Sparkanos
+📘 Índice
 
-📌 Indice
-📘 Sobre o Projeto
+Sobre o Projeto
 
- A eletricidade, como conhecemos hoje, é resultado de séculos de descobertas e avanços científicos que transformaram profundamente a sociedade. Com o aumento das preocupações ambientais  e o surgimento da Indústria 4.0, tornou-se essencial buscar formas mais eficientes, inteligentes e sustentáveis de utilizar energia.
+Objetivos
 
- Com essa demanda crescente, sistemas de monitoramento energético passaram a ser fundamentais para otimizar o consumo, reduzir custos e integrar fontes de energia renovável. Este  projeto se insere nesse contexto, oferecendo uma solução tecnológica embarcada para análise e acompanhamento do uso de energia em ambientes industriais.
+Descrição do Sistema
 
-🎯 Objetivos
- Desenvolver um sistema embarcado de monitoramento de energia utilizando:
- ESP32
- Sensor de corrente SCT-013-000
- Sensor de tensão ACS712
- O sistema busca aprimorar o gerenciamento energético em ambientes industriais, fornecendo visualização de dados, gráficos e informações essenciais para tomada de decisões.
+Tela Principal
 
- 
- 🖥️ Descrição do Sistema
- 
- 📌 Tela Principal
+Fluxograma
 
- O usuário informa o nome do objeto a ser monitorado.
- O sistema coleta informações dos sensores e apresenta:
- Dados em tempo real
- Gráfico de variação de corrente
+Levantamento de Requisitos
 
- Inclui:
- #Manual de usuário
+Diagramas UML
 
-#Configurações de personalização
+Prototipação
 
-#🔐 Cadastro e Login
--O uso do aplicativo exige criação de conta, garantindo a segurança e integridade das informações.
-
-📈 Fluxograma
--Este espaço pode ser preenchido com a imagem do seu fluxograma em formato PNG/SVG assim que disponível.
-
-📝 Levantamento de Requisitos
--Perfis dos Usuários
-
-Administrador (Web Designer)
--Criar layout de alta fidelidade.
--Seguir as especificações do cliente usando ferramentas de prototipagem.
--Desenvolvedor (Front-End)
--Desenvolver em React Native.
--Organizar a interface e componentes.
--Usuário do Sistema (Cliente)
--Utilizar os recursos disponíveis no aplicativo.
-📚 Product Backlog
-Insira aqui seu backlog quando o documento estiver concluído.
-
-🗂️ Diagramas UML
--7.1 — Diagrama de Casos de Uso
--Adicionar imagem do diagrama aqui.
-
-🎨 Prototipação das Interfaces
--Adicionar protótipos das telas aqui (Figma, imagens, mockups, etc.)
-
-💻 Tecnologia
-IDEs de desenvolvimento
-Git e GitHub para versionamento
-Infraestrutura em nuvem
-Ferramentas de testes
-
-📱 Equipamentos
-
-Computadores e notebooks
-Dispositivos móveis para teste
-
-📡 Comunicação
-E-mails, mensagens e daily mile
+Tecnologias
 
 Equipamentos
-Sensor ACS712
-Sensor SCT-013-000
 
-👥 Equipe Envolvida
+Comunicação
 
-Product Owner	João Paulo Oliveira
+Equipe
 
-Scrum Master	João Paulo Oliveira
+📖 1. Sobre o Projeto
 
-Stakeholders	Wesley Pecoraro, Fabiana Comandini, Paulo Netto, Luciano Trevisan, Júlio Melli, Márcio Marinho
+A eletricidade, tal como a conhecemos, é fruto de séculos de pesquisa, experimentação e inovação — responsáveis por impulsionar a evolução tecnológica e transformar profundamente a sociedade.
 
-Desenvolvedor Front-End	Bleddilyn Ferreira, Fernando Filho, Felipe Caetano, João Zeferino
+Com o avanço da Indústria 4.0, aliado às crescentes preocupações ambientais, surge a necessidade de sistemas cada vez mais inteligentes, eficientes e sustentáveis para acompanhar e otimizar o consumo energético.
 
-Desenvolvedor Back-End	Bleddilyn Ferreira, João Oliveira
+Nesse cenário, o ARK apresenta-se como uma solução embarcada moderna e precisa, capaz de monitorar, analisar e fornecer informações essenciais sobre o uso de energia em ambientes industriais, contribuindo para redução de custos, prevenção de falhas e maior eficiência operacional.
 
-Full Stack	Bleddilyn Ferreira, João Oliveira
+🎯 2. Objetivos
+
+Desenvolver um sistema embarcado para monitoramento energético utilizando:
+
+ESP32
+
+Sensor de corrente SCT-013-000
+
+Sensor de tensão ACS712
+
+O objetivo central é aprimorar o gerenciamento energético em ambientes industriais, permitindo:
+
+Visualização de dados em tempo real
+
+Exibição de gráficos de variação de corrente
+
+Acesso a indicadores essenciais para tomada de decisões
+
+🖥️ 3. Descrição do Sistema
+
+O ARK integra hardware e software para realizar a leitura dos sensores e transmitir as informações ao usuário final por meio de um aplicativo intuitivo, dinâmico e personalizável.
+
+🖼️ 4. Tela Principal
+
+Na interface inicial, o usuário pode:
+
+Informar o nome do equipamento a ser monitorado
+
+Visualizar os dados capturados pelos sensores em tempo real
+
+Acessar gráficos atualizados automaticamente
+
+Além disso, a tela principal oferece acesso a:
+
+📘 Manual do Usuário
+
+🎨 Configurações de Personalização
+
+🔐 Cadastro e Login (obrigatórios para garantir a segurança dos dados)
+
+📈 5. Fluxograma
+
+Este espaço deve ser preenchido com o fluxograma do sistema assim que disponível (PNG ou SVG).
+
+Sugestão: incluir um fluxograma com o fluxo ESP32 → API → App.
+
+📝 6. Levantamento de Requisitos
+👤 Perfis de Usuários
+Administrador (Web Designer)
+
+Criar layouts de alta fidelidade
+
+Desenvolver protótipos seguindo especificações do cliente
+
+Desenvolvedor (Front-End)
+
+Implementar as telas em React Native
+
+Organizar interface e componentes reutilizáveis
+
+Usuário Final (Cliente)
+
+Acessar os recursos do aplicativo
+
+Acompanhar o monitoramento e personalizar preferências
+
+📚 7. Product Backlog
+
+O backlog será inserido quando finalizado.
+
+Recomenda-se incluir: Épicos, Histórias de Usuário, Critérios de Aceitação e Priorização.
+
+🗂️ 8. Diagramas UML
+📌 7.1 — Diagrama de Casos de Uso
+
+Adicionar aqui a imagem do diagrama correspondente.
+
+🎨 9. Prototipação das Interfaces
+
+Adicionar protótipos desenvolvidos em:
+
+Figma
+
+Adobe XD
+
+Mockups e wireframes de navegação
+
+Sugestão: incluir screenshots das telas principais (Login, Dashboard, Gráficos).
+
+💻 10. Tecnologias Utilizadas
+
+IDEs de desenvolvimento
+
+Git e GitHub para versionamento
+
+Infraestrutura em nuvem
+
+Ferramentas de testes e simulação
+
+📱 11. Equipamentos Necessários
+💻 Computação
+
+Notebooks e computadores
+
+Dispositivos móveis para testes
+
+🔌 Sensores
+
+ACS712
+
+SCT-013-000
+
+📡 12. Comunicação
+
+E-mails
+
+Mensagens instantâneas
+
+Reuniões diárias (Daily Meeting)
+
+Feedback constante entre equipe e stakeholders
+
+👥 13. Equipe Envolvida
+
+Product Owner:
+
+João Paulo Oliveira
+
+Scrum Master:
+
+João Paulo Oliveira
 
 Designer	Bleddilyn Ferreira
 DBA
