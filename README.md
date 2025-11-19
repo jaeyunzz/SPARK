@@ -72,17 +72,22 @@ Dispositivos móveis para teste
 E-mails, mensagens e daily mile
 
 Equipamentos
-Sensor ACS712: $9,99
-Sensor SCT-013-000: ≈ $50,00
-
+Sensor ACS712
+Sensor SCT-013-000
 
 👥 Equipe Envolvida
 
 Product Owner	João Paulo Oliveira
+
 Scrum Master	João Paulo Oliveira
+
 Stakeholders	Wesley Pecoraro, Fabiana Comandini, Paulo Netto, Luciano Trevisan, Júlio Melli, Márcio Marinho
+
 Desenvolvedor Front-End	Bleddilyn Ferreira, Fernando Filho, Felipe Caetano, João Zeferino
+
 Desenvolvedor Back-End	Bleddilyn Ferreira, João Oliveira
+
 Full Stack	Bleddilyn Ferreira, João Oliveira
+
 Designer	Bleddilyn Ferreira
 DBA
