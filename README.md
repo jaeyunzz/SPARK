@@ -3,31 +3,9 @@
 
 ⚡ ARK – Sistema de Monitoramento Energético
 Especificação de Requisitos – Sparkanos
+
 📘 Índice
 
-Sobre o Projeto
-
-Objetivos
-
-Descrição do Sistema
-
-Tela Principal
-
-Fluxograma
-
-Levantamento de Requisitos
-
-Diagramas UML
-
-Prototipação
-
-Tecnologias
-
-Equipamentos
-
-Comunicação
-
-Equipe
 
 📖 1. Sobre o Projeto
 
