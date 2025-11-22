@@ -5,8 +5,6 @@
 Projeto: SPARK
 <br>Sua energia. Seu controle. é SPARK.</br>
 
-Equipe Responsável:
-
 Identificação dos Envolvidos
 | Papel | Nome(s) |
 | :--- | :--- |
