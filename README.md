@@ -46,29 +46,29 @@ acompanhamento visual por gráficos e indicadores,
 
 geração de insights que auxiliam na tomada de decisões.
 
-2. Objetivos do Projeto
-Monitoramento de Consumo
+<h1> Objetivos do Projeto </h1>
+<h3>Monitoramento de Consumo</h3>
 
 Permitir que o usuário acompanhe, em tempo real, o consumo elétrico de equipamentos industriais ou domésticos.
 
-Eficiência Energética
+<h3>Eficiência Energética</h3>
 
 Apoiar a redução de desperdícios e o uso inteligente de energia, apresentando dados precisos e históricos de medição.
 
-Autonomia para o Usuário
+<h3>Autonomia para o Usuário</h3>
 
 Oferecer um sistema simples, intuitivo e de acesso direto, sem necessidade de operações complexas ou equipamentos adicionais.
 
-Interface Intuitiva
+<h3>Interface Intuitiva</h3>
 
 Disponibilizar gráficos e informações claras sobre consumo, facilitando a análise de desempenho energético.
 
-Segurança e Personalização
+<h3>Segurança e Personalização</h3>
 
 Permitir cadastro, login e configurações personalizadas, garantindo acesso individualizado e armazenamento confiável dos dados coletados.
 
-3. Descrição do Sistema
-Funcionamento Geral
+<h1> Descrição do Sistema </h1>
+<h3>Funcionamento Geral</h3>
 
 O SPARK utiliza:
 
@@ -80,7 +80,7 @@ Sensor de tensão ACS712
 
 Esses componentes capturam os valores de consumo energético em tempo real e enviam os dados para o aplicativo, que processa e apresenta os resultados visualmente.
 
-Tela Principal
+<h3>Tela Principal</h3>
 
 O usuário insere o nome do equipamento monitorado.
 
@@ -94,7 +94,7 @@ tabela de valores,
 
 gráfico de variação de corrente.
 
-Ambiente do Aplicativo
+<h3>Ambiente do Aplicativo</h3>
 
 Tela de cadastro e login obrigatório.
 
