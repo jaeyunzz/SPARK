@@ -36,7 +36,6 @@ double lerTensao() {
   return v_real;
 }
 
-// Página HTML simples para depuração via navegador
 const char MAIN_page[] PROGMEM = R"rawliteral(
 <!DOCTYPE html>
 <html>
@@ -144,7 +143,6 @@ void loop() {
   if (millis() - lastSend > intervalo) {
     corrente = emon1.calcIrms(1480);
 
-    // Usa tensão e potência manuais se definidas
     tensaoMedida = (tensaoManual > 0) ? tensaoManual : lerTensao();
     potencia = (potenciaManual > 0) ? potenciaManual : (corrente * tensaoMedida);
 
