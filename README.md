@@ -39,7 +39,7 @@ A transição para fontes sustentáveis e o avanço da Indústria 4.0 permitiram
 
 Sensores, IoT e análise de dados passaram a ser ferramentas essenciais para empresas e setores que buscam eficiência operacional e gestão energética racional.
 
-Nesse contexto surge o SPARK, um sistema embarcado desenvolvido com ESP32 e sensores de corrente e tensão, para permitir:
+Nesse contexto surge o <span style="color: #B8DBD9;">**SPARK**</span>, um sistema embarcado desenvolvido com ESP32 e sensores de corrente e tensão, para permitir:
 
 <ul>
   <li>monitoramento contínuo do consumo,</li>
