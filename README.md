@@ -1,152 +1,105 @@
 <img width="350" height="350" alt="SPARK-logo" src="https://github.com/user-attachments/assets/85bfdff4-eaa7-48f8-9f5c-00f4ec38a611" />
 
-Especificação de Requisitos – Sparkanos
+Projeto: SPARK – Sistema Inteligente de Monitoramento de Energia
 
-📘 Índice
+Área: Sistemas Embarcados e IoT
+Equipe Responsável:
 
+Identificação dos Envolvidos
+Papel	Nome
+Product Owner	João Paulo Oliveira
+Scrum Master	João Paulo Oliveira
+Stakeholders	Wesley Pecoraro, Fabiana Comandini, Paulo Netto, Luciano Trevisan, Júlio Melli, Márcio Marinho
+Desenvolvedores Front-End	Bleddilyn Ferreira, Fernando Filho, Felipe Caetano, João Zeferino
+Desenvolvedores Back-End	Bleddilyn Ferreira, João Oliveira
+Full Stack	Bleddilyn Ferreira, João Oliveira
+Designer	Bleddilyn Ferreira
+DBA	João Oliveira
 
-📖 1. Sobre o Projeto
+<h1> Contexto </h1>
 
-A eletricidade, tal como a conhecemos, é fruto de séculos de pesquisa, experimentação e inovação — responsáveis por impulsionar a evolução tecnológica e transformar profundamente a sociedade.
+A evolução da eletricidade acompanhou o desenvolvimento tecnológico da humanidade, passando de experimentos fundamentais realizados por cientistas como Franklin, Faraday, Tesla e Edison até chegar à era moderna, na qual a energia elétrica se tornou elemento central para a produção industrial, consumo doméstico e avanço digital.
 
-Com o avanço da Indústria 4.0, aliado às crescentes preocupações ambientais, surge a necessidade de sistemas cada vez mais inteligentes, eficientes e sustentáveis para acompanhar e otimizar o consumo energético.
+Com a expansão industrial, cresceu também a preocupação com:
 
-Nesse cenário, o SPARK apresenta-se como uma solução embarcada moderna e precisa, capaz de monitorar, analisar e fornecer informações essenciais sobre o uso de energia em ambientes industriais, contribuindo para redução de custos, prevenção de falhas e maior eficiência operacional.
+o alto consumo energético,
 
-🎯 2. Objetivos
+os custos provenientes do desperdício,
 
-Desenvolver um sistema embarcado para monitoramento energético utilizando:
+os impactos ambientais da geração não renovável.
 
-ESP32
+A transição para fontes sustentáveis e o avanço da Indústria 4.0 permitiram a adoção de sistemas inteligentes, capazes de:
 
-Sensor de corrente SCT-013-000
+monitorar o consumo em tempo real,
+
+detectar falhas ou irregularidades,
+
+otimizar o uso de energia para reduzir custos e impactos ao meio ambiente.
+
+Sensores, IoT e análise de dados passaram a ser ferramentas essenciais para empresas e setores que buscam eficiência operacional e gestão energética racional.
+
+Nesse contexto surge o SPARK, um sistema embarcado desenvolvido com ESP32 e sensores de corrente e tensão, para permitir:
+
+monitoramento contínuo do consumo,
+
+acompanhamento visual por gráficos e indicadores,
+
+geração de insights que auxiliam na tomada de decisões.
+
+2. Objetivos do Projeto
+Monitoramento de Consumo
+
+Permitir que o usuário acompanhe, em tempo real, o consumo elétrico de equipamentos industriais ou domésticos.
+
+Eficiência Energética
+
+Apoiar a redução de desperdícios e o uso inteligente de energia, apresentando dados precisos e históricos de medição.
+
+Autonomia para o Usuário
+
+Oferecer um sistema simples, intuitivo e de acesso direto, sem necessidade de operações complexas ou equipamentos adicionais.
+
+Interface Intuitiva
+
+Disponibilizar gráficos e informações claras sobre consumo, facilitando a análise de desempenho energético.
+
+Segurança e Personalização
+
+Permitir cadastro, login e configurações personalizadas, garantindo acesso individualizado e armazenamento confiável dos dados coletados.
+
+3. Descrição do Sistema
+Funcionamento Geral
+
+O SPARK utiliza:
+
+Microcontrolador ESP32
+
+Sensor de corrente SCT-013-00
 
 Sensor de tensão ACS712
 
-O objetivo central é aprimorar o gerenciamento energético em ambientes industriais, permitindo:
+Esses componentes capturam os valores de consumo energético em tempo real e enviam os dados para o aplicativo, que processa e apresenta os resultados visualmente.
 
-Visualização de dados em tempo real
+Tela Principal
 
-Exibição de gráficos de variação de corrente
+O usuário insere o nome do equipamento monitorado.
 
-Acesso a indicadores essenciais para tomada de decisões
+O sistema identifica e coleta os dados via sensores.
 
-🖥️ 3. Descrição do Sistema
+Os resultados são apresentados em forma de:
 
-O SPARK integra hardware e software para realizar a leitura dos sensores e transmitir as informações ao usuário final por meio de um aplicativo intuitivo, dinâmico e personalizável.
+informações capturadas,
 
-🖼️ 4. Tela Principal
+tabela de valores,
 
-Na interface inicial, o usuário pode:
+gráfico de variação de corrente.
 
-Informar o nome do equipamento a ser monitorado
+Ambiente do Aplicativo
 
-Visualizar os dados capturados pelos sensores em tempo real
+Tela de cadastro e login obrigatório.
 
-Acessar gráficos atualizados automaticamente
+Configuração e personalização de parâmetros.
 
-Além disso, a tela principal oferece acesso a:
+Manual do usuário para facilitar o uso.
 
-📘 Manual do Usuário
-
-🎨 Configurações de Personalização
-
-🔐 Cadastro e Login (obrigatórios para garantir a segurança dos dados)
-
-📈 5. Fluxograma
-
-Este espaço deve ser preenchido com o fluxograma do sistema assim que disponível (PNG ou SVG).
-
-Sugestão: incluir um fluxograma com o fluxo ESP32 → API → App.
-
-📝 6. Levantamento de Requisitos
-
-👤 Perfis de Usuários
-
-Administrador (Web Designer)
-
-Criar layouts de alta fidelidade
-
-Desenvolver protótipos seguindo especificações do cliente
-
-Desenvolvedor (Front-End)
-
-Implementar as telas em React Native
-
-Organizar interface e componentes reutilizáveis
-
-Usuário Final (Cliente)
-
-Acessar os recursos do aplicativo
-
-Acompanhar o monitoramento e personalizar preferências
-
-📚 7. Product Backlog
-
-O backlog será inserido quando finalizado.
-
-Recomenda-se incluir: Épicos, Histórias de Usuário, Critérios de Aceitação e Priorização.
-
-🗂️ 8. Diagramas UML
-
-📌 7.1 — Diagrama de Casos de Uso
-
-Adicionar aqui a imagem do diagrama correspondente.
-
-🎨 9. Prototipação das Interfaces
-
-Adicionar protótipos desenvolvidos em:
-
-Figma
-
-Adobe XD
-
-Mockups e wireframes de navegação
-
-Sugestão: incluir screenshots das telas principais (Login, Dashboard, Gráficos).
-
-💻 10. Tecnologias Utilizadas
-
-IDEs de desenvolvimento
-
-Git e GitHub para versionamento
-
-Infraestrutura em nuvem
-
-Ferramentas de testes e simulação
-
-📱 11. Equipamentos Necessários
-
-💻 Computação
-
-Notebooks e computadores
-
-Dispositivos móveis para testes
-
-🔌 Sensores
-
-ACS712
-
-SCT-013-000
-
-📡 12. Comunicação
-
-E-mails
-
-Mensagens instantâneas
-
-Reuniões diárias (Daily Meeting)
-
-Feedback constante entre equipe e stakeholders
-
-👥 13. Equipe Envolvida
-
-Product Owner:
-
-João Paulo Oliveira
-
-Scrum Master:
-
-João Paulo Oliveira
-
-Designer	Bleddilyn Ferreira
+Interface organizada e simples para leitura dos resultados.
