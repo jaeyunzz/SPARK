@@ -1,7 +1,7 @@
 <img width="350" height="350" alt="SPARK-logo" src="https://github.com/user-attachments/assets/85bfdff4-eaa7-48f8-9f5c-00f4ec38a611" />
 
 Projeto: SPARK
-<br>Sua energia. Seu control, é SPARK.</br>
+<br>Sua energia. Seu controle. é SPARK.</br>
 
 Equipe Responsável:
 
@@ -104,3 +104,29 @@ Configuração e personalização de parâmetros.
 Manual do usuário para facilitar o uso.
 
 Interface organizada e simples para leitura dos resultados.
+
+<h1>Análise de Riscos</h1>
+<h3>Precisão e Calibração dos Sensores</h3>
+
+<strong>Risco:</strong> leituras podem apresentar erros se os sensores não estiverem calibrados corretamente.
+<strong>Mitigação:</strong> procedimentos de validação, calibração inicial e monitoramento periódico.
+
+<h3>Problemas Técnicos de Hardware</h3>
+
+<strong>Risco:</strong> falhas no ESP32, nos sensores ou na alimentação podem interromper o funcionamento.
+<strong>Mitigação:</strong> manutenção preventiva, testes de carga e redundância de peças essenciais.
+
+<h3>Perda de Conexão</h3>
+
+<strong>Risco:</strong> ausência temporária de Wi-Fi interfere na transmissão dos dados.
+<strong>Mitigação:</strong> criação de armazenamento offline temporário até o retorno da conexão.
+
+<h3>Aceitação pelo Usuário</h3>
+
+<strong>Risco:</strong> usuários podem ter dificuldade de interpretar informações ou gráficos.
+<strong>Mitigação:</strong> interface simplificada e manual explicativo.
+
+<h3>Atualizações e Manutenção</h3>
+
+<strong>Risco:</strong> falta de atualização compromete a segurança e desempenho do sistema.
+<strong>Mitigação:</strong> calendário de manutenção contínua e revisão da base de código.
