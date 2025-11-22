@@ -6,15 +6,16 @@ Projeto: SPARK – Sistema Inteligente de Monitoramento de Energia
 Equipe Responsável:
 
 Identificação dos Envolvidos
-Papel	Nome
-Product Owner	João Paulo Oliveira
-Scrum Master	João Paulo Oliveira
-Stakeholders	Wesley Pecoraro, Fabiana Comandini, Paulo Netto, Luciano Trevisan, Júlio Melli, Márcio Marinho
-Desenvolvedores Front-End	Bleddilyn Ferreira, Fernando Filho, Felipe Caetano, João Zeferino
-Desenvolvedores Back-End	Bleddilyn Ferreira, João Oliveira
-Full Stack	Bleddilyn Ferreira, João Oliveira
-Designer	Bleddilyn Ferreira
-DBA	João Oliveira
+| Papel | Nome(s) |
+| :--- | :--- |
+| **Product Owner** | João Paulo Oliveira |
+| **Scrum Master** | João Paulo Oliveira |
+| **Stakeholders** | Wesley Pecoraro, Fabiana Comandini, Paulo Netto, Luciano Trevisan, Júlio Melli, Márcio Marinho |
+| **Desenvolvedores Front-End** | Bleddilyn Ferreira, Fernando Filho, Felipe Caetano, João Zeferino |
+| **Desenvolvedores Back-End** | Bleddilyn Ferreira, João Oliveira |
+| **Full Stack** | Bleddilyn Ferreira, João Oliveira |
+| **Designer** | Bleddilyn Ferreira |
+| **DBA** | João Oliveira |
 
 <h1> Contexto </h1>
 
