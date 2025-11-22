@@ -23,29 +23,29 @@ A evolução da eletricidade acompanhou o desenvolvimento tecnológico da humani
 
 Com a expansão industrial, cresceu também a preocupação com:
 
-o alto consumo energético,
-
-os custos provenientes do desperdício,
-
-os impactos ambientais da geração não renovável.
+<ul>
+  <li>o alto consumo energético,</li>
+  <li>os custos provenientes do desperdício,</li>
+  <li>os impactos ambientais da geração não renovável.</li>
+</ul>
 
 A transição para fontes sustentáveis e o avanço da Indústria 4.0 permitiram a adoção de sistemas inteligentes, capazes de:
 
-monitorar o consumo em tempo real,
-
-detectar falhas ou irregularidades,
-
-otimizar o uso de energia para reduzir custos e impactos ao meio ambiente.
+<ul>
+  <li>monitorar o consumo em tempo real,</li>
+  <li>detectar falhas ou irregularidades,</li>
+  <li>otimizar o uso de energia para reduzir custos e impactos ao meio ambiente.</li>
+</ul>
 
 Sensores, IoT e análise de dados passaram a ser ferramentas essenciais para empresas e setores que buscam eficiência operacional e gestão energética racional.
 
 Nesse contexto surge o SPARK, um sistema embarcado desenvolvido com ESP32 e sensores de corrente e tensão, para permitir:
 
-monitoramento contínuo do consumo,
-
-acompanhamento visual por gráficos e indicadores,
-
-geração de insights que auxiliam na tomada de decisões.
+<ul>
+  <li>monitoramento contínuo do consumo,</li>
+  <li>acompanhamento visual por gráficos e indicadores,</li>
+  <li>geração de insights que auxiliam na tomada de decisões.</li>
+</ul>
 
 <h1> Objetivos do Projeto </h1>
 <h3>Monitoramento de Consumo</h3>
@@ -73,37 +73,36 @@ Permitir cadastro, login e configurações personalizadas, garantindo acesso ind
 
 O SPARK utiliza:
 
-Microcontrolador ESP32
-
-Sensor de corrente SCT-013-00
-
-Sensor de tensão ACS712
+<ul>
+  <li>Microcontrolador ESP32</li>
+  <li>Sensor de corrente SCT-013-00</li>
+  <li>Sensor de tensão ACS712</li>
+</ul>
 
 Esses componentes capturam os valores de consumo energético em tempo real e enviam os dados para o aplicativo, que processa e apresenta os resultados visualmente.
 
 <h3>Tela Principal</h3>
 
-O usuário insere o nome do equipamento monitorado.
-
-O sistema identifica e coleta os dados via sensores.
-
-Os resultados são apresentados em forma de:
-
-informações capturadas,
-
-tabela de valores,
-
-gráfico de variação de corrente.
+<ul>
+  <li>O usuário insere o nome do equipamento monitorado.</li>
+  <li>O sistema identifica e coleta os dados via sensores.</li>
+  <li>Os resultados são apresentados em forma de:
+    <ul>
+        <li>informações capturadas,</li>
+        <li>tabela de valores,</li>
+        <li>gráfico de variação de corrente.</li>
+    </ul>
+  </li>
+</ul>
 
 <h3>Ambiente do Aplicativo</h3>
 
-Tela de cadastro e login obrigatório.
-
-Configuração e personalização de parâmetros.
-
-Manual do usuário para facilitar o uso.
-
-Interface organizada e simples para leitura dos resultados.
+<ul>
+  <li>Tela de cadastro e login obrigatório.</li>
+  <li>Configuração e personalização de parâmetros.</li>
+  <li>Manual do usuário para facilitar o uso.</li>
+  <li>Interface organizada e simples para leitura dos resultados.</li>
+</ul>
 
 <h1>Análise de Riscos</h1>
 <h3>Precisão e Calibração dos Sensores</h3>
