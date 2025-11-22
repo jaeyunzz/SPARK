@@ -109,24 +109,24 @@ Interface organizada e simples para leitura dos resultados.
 <h3>Precisão e Calibração dos Sensores</h3>
 
 <strong>Risco:</strong> leituras podem apresentar erros se os sensores não estiverem calibrados corretamente.
-<br><strong>Mitigação:</strong></br> procedimentos de validação, calibração inicial e monitoramento periódico.
+<br><strong>Mitigação:</strong> procedimentos de validação, calibração inicial e monitoramento periódico.</br>
 
 <h3>Problemas Técnicos de Hardware</h3>
 
 <strong>Risco:</strong> falhas no ESP32, nos sensores ou na alimentação podem interromper o funcionamento.
-<br><strong>Mitigação:</strong></br> manutenção preventiva, testes de carga e redundância de peças essenciais.
+<br><strong>Mitigação:</strong> manutenção preventiva, testes de carga e redundância de peças essenciais.</br>
 
 <h3>Perda de Conexão</h3>
 
 <strong>Risco:</strong> ausência temporária de Wi-Fi interfere na transmissão dos dados.
-<br><strong>Mitigação:</strong></br> criação de armazenamento offline temporário até o retorno da conexão.
+<br><strong>Mitigação:</strong> criação de armazenamento offline temporário até o retorno da conexão.</br>
 
 <h3>Aceitação pelo Usuário</h3>
 
 <strong>Risco:</strong> usuários podem ter dificuldade de interpretar informações ou gráficos.
-<br><strong>Mitigação:</strong></br> interface simplificada e manual explicativo.
+<br><strong>Mitigação:</strong> interface simplificada e manual explicativo.</br>
 
 <h3>Atualizações e Manutenção</h3>
 
 <strong>Risco:</strong> falta de atualização compromete a segurança e desempenho do sistema.
-<br><strong>Mitigação:</strong></br> calendário de manutenção contínua e revisão da base de código.
+<br><strong>Mitigação:</strong> calendário de manutenção contínua e revisão da base de código.</br>
