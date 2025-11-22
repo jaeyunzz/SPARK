@@ -1,7 +1,7 @@
 <img width="350" height="350" alt="SPARK-logo" src="https://github.com/user-attachments/assets/85bfdff4-eaa7-48f8-9f5c-00f4ec38a611" />
 
 Projeto: SPARK
-Sua energia. Seu control, é SPARK.
+<br>Sua energia. Seu control, é SPARK.</br>
 
 Equipe Responsável:
 
