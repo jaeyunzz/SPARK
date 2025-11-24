@@ -75,7 +75,7 @@ body {
 }
 
 .spark-icon {
-    margin-bottom: 1rem;
+    margin: -140px;
 }
 
 .spark-icon img {
@@ -421,4 +421,5 @@ body {
         gap: 1rem;
         font-size: 0.9rem;
     }
+
 }
