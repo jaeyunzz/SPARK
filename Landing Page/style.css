@@ -65,6 +65,7 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0.8;
+    filter: brightness(0.5); 
 }
 
 .inicio-content {
@@ -423,3 +424,4 @@ body {
     }
 
 }
+
