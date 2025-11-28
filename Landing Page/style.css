@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #040613;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    padding: 1.5rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4fc3f7;
+}
+
+.inicio {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.inicio-wallpaper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.wallpaper {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    filter: brightness(0.5); 
+}
+
+.inicio-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+}
+
+.spark-icon {
+    margin: -140px;
+}
+
+.spark-icon img {
+    width: 400px;
+    height: auto;
+}
+
+.slogan {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.botao {
+    background-color: #ffffff;
+    color: #2F4550;
+    border: 1px solid #888888;
+    border-radius: 8px;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #B8DBD9;
+    color: #ffffff;
+    border-color: #4fc3f7;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 195, 247, 0.3);
+}
+
+.secao-sobre {
+    padding: 6rem 2rem;
+    background-color: 040613;
+}
+
+.sobre-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-sobre {
+    font-size: 4rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.sobre-spark {
+    color: #B8DBD9;
+    font-weight: inherit; 
+}
+
+.sobre-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sobre-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    max-width: 800px;
+    text-align: justify;
+}
+
+.separador {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.separador img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
+.secao-beneficio {
+    padding: 6rem 2rem;
+    background-color: 040613;
+}
+
+.beneficio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-beneficio {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 4rem;
+    text-align: right;
+}
+
+.beneficio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card-beneficio {
+    background-color: transparent;
+    border: 2px solid #B8DBD9;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-beneficio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(79, 195, 247, 0.2);
+}
+
+.card-beneficio-titulo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #B8DBD9;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #B8DBD9;
+    padding-bottom: 0.5rem;
+}
+
+.card-beneficio-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.secao-cliente {
+    padding: 6rem 2rem;
+    background-color: 040613;
+    position: relative;
+}
+
+.container-cliente {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cliente-titulo {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 3rem;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.cliente-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.texto-cliente {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+    text-align: justify;
+}
+
+.secao-contato {
+    padding: 6rem 2rem;
+    background-color: 040613;
+}
+
+.contato-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contato-titulo {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contato-subtitulo {
+    font-size: 1.1rem;
+    color: #B8DBD9;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #B8DBD9;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 1rem;
+    border: 2px solid #B8DBD9;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888888;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4fc3f7;
+    box-shadow: 0 0 10px rgba(79, 195, 247, 0.3);
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    background-color: #040613;
+    color: #ffffff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.botao-enviar {
+    background-color: #fff;
+    color: #2F4550;
+    border: 2px solid #B8DBD9;
+    border-radius: 8px;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.footer {
+    padding: 3rem 2rem;
+    background-color: 040613;
+    border-top: 1px solid #333333;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-copyright {
+    color: #888888;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .spark-title {
+        font-size: 3.5rem;
+    }
+
+    .slogan {
+        font-size: 1.2rem;
+    }
+
+    .titulo-sobre,
+    .titulo-beneficio,
+    .cliente-titulo {
+        font-size: 2.5rem;
+    }
+
+    .nav-container {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .beneficio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .spark-title {
+        font-size: 2.5rem;
+    }
+
+    .slogan {
+        font-size: 1rem;
+    }
+
+    .titulo-sobre,
+    .titulo-beneficio,
+    .cliente-titulo {
+        font-size: 2rem;
+    }
+
+    .nav-container {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+}
+
